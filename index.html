@@ -37,4 +37,213 @@
       background: var(--secondary);
       padding: 30px 20px;
       display: flex;
-      flex-directio
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 2px 0 8px rgba(0,0,0,.05);
+      transition: background .3s;
+    }
+    .sidebar h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    .sidebar h2 {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+    .contact a {
+      display: block;
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .skills span {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      font-size: 13px;
+      padding: 6px 12px;
+      margin: 5px 5px 0 0;
+      border-radius: 50px;
+      transition: background .3s;
+    }
+    .download-btn {
+      margin-top: 20px;
+      padding: 12px;
+      text-align: center;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background .2s;
+      display: block;
+    }
+    .download-btn:hover { background: #ea580c; }
+    /* Dark mode toggle */
+    .toggle {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 20px;
+      cursor: pointer;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 50px;
+      transition: background .3s;
+    }
+    .toggle:hover { background: #ea580c; }
+    /* Main */
+    .main {
+      flex: 1;
+      padding: 40px 60px;
+      position: relative;
+    }
+    .section {
+      margin-bottom: 40px;
+      animation: fadeInUp .8s ease;
+    }
+    .section h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: var(--primary);
+      margin-bottom: 15px;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+    .section p, .section li {
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+    ul { padding-left: 20px; }
+    .timeline {
+      border-left: 3px solid var(--secondary);
+      padding-left: 20px;
+    }
+    .timeline .job {
+      margin-bottom: 25px;
+      position: relative;
+    }
+    .timeline .job:before {
+      content: '';
+      position: absolute;
+      left: -11px;
+      top: 6px;
+      width: 14px; height: 14px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+    .job strong { font-weight: 600; color: var(--primary); display:block; }
+    .job em { font-size: 14px; color: var(--muted); display:block; margin-bottom:8px; }
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 50px;
+    }
+    /* Animation */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 900px) {
+      body { flex-direction: column; }
+      .sidebar { width: 100%; flex-direction: row; align-items: center; }
+      .main { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div>
+      <h1>Kedhar Vishnu</h1>
+      <h2>Java Developer (4.7 Yrs)</h2>
+      <div class="contact">
+        <a href="mailto:kedharvishnu77@gmail.com">📧 kedharvishnu77@gmail.com</a>
+        <a href="tel:+919912324400">📞 +91 9912324400</a>
+      </div>
+      <div class="skills">
+        <h4>Skills</h4>
+        <span>Java</span><span>Spring Boot</span><span>Microservices</span>
+        <span>AWS</span><span>Azure</span><span>React.js</span>
+        <span>Hibernate</span><span>SQL</span><span>Docker</span>
+        <span>Git</span><span>Maven</span><span>JUnit</span>
+      </div>
+      <a href="KedharVishnu_Resume.pdf" class="download-btn" download>📄 Download Resume</a>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+    <button class="toggle" id="modeToggle">🌙</button>
+    
+    <section class="section">
+      <h3>Profile Summary</h3>
+      <p>Java Developer with 4.7 years of experience in building enterprise-grade web applications. 
+      Skilled in Java/J2EE, Spring Boot, Microservices, AWS Cloud, and React.js. Experienced in Agile methodologies, 
+      CI/CD, and developing scalable, secure applications with strong database and API integration expertise.</p>
+    </section>
+
+    <section class="section">
+      <h3>Experience</h3>
+      <div class="timeline">
+        <div class="job">
+          <strong>System Engineer – Tata Consultancy Services (TCS)</strong>
+          <em>Hyderabad | Nov 2020 – Present</em>
+          <ul>
+            <li>Developed enterprise apps using Spring Boot, Microservices, and Core Java.</li>
+            <li>Migrated monolithic systems to resilient microservices architectures.</li>
+            <li>Implemented secure auth using Spring Security, OAuth2.0, and JWT.</li>
+            <li>Integrated Apache Kafka for event-driven communication.</li>
+            <li>Deployed scalable solutions on AWS EKS clusters.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h3>Projects</h3>
+      <ul>
+        <li><strong>Bank of America</strong> – Migrated applications to microservices, built OAuth2.0 authentication, and developed fault-tolerant integrations.</li>
+        <li><strong>ASML</strong> – Upgraded JDK to 17, migrated services to AWS EKS, developed React.js UI components, and automated DB operations with Liquibase.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h3>Education</h3>
+      <p>B.Tech in Computer Science & Engineering — Vignan’s Foundation for Science, Technology & Research (2016 – 2020)</p>
+    </section>
+
+    <section class="section">
+      <h3>Certifications</h3>
+      <ul>
+        <li>Business English Certificate (BEC-Vantage, B2 Level) – Cambridge University</li>
+        <li>Preliminary English Test (PET, B1 Level) – Cambridge University</li>
+      </ul>
+    </section>
+
+    <div class="footer">© <span id="y"></span> Kedhar Vishnu</div>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    const toggle = document.getElementById("modeToggle");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+    });
+  </script>
+</body>
+</html>
+
