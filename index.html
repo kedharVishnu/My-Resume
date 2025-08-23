@@ -4,129 +4,105 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kedhar Vishnu – Resume</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #ffffff;
-      --primary: #0f4c81;
-      --secondary: #f3f6fa;
-      --text: #1e293b;
-      --muted: #64748b;
-      --accent: #f97316;
+      --bg: #f9fafb;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #0f172a;
+      --accent: #14b8a6;
+      --card: #ffffff;
     }
     body.dark {
       --bg: #0f172a;
-      --primary: #38bdf8;
-      --secondary: #1e293b;
       --text: #f1f5f9;
       --muted: #94a3b8;
-      --accent: #fbbf24;
+      --primary: #38bdf8;
+      --accent: #f59e0b;
+      --card: #1e293b;
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * { margin:0; padding:0; box-sizing:border-box; }
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Poppins', sans-serif;
       background: var(--bg);
       color: var(--text);
-      display: flex;
-      min-height: 100vh;
       transition: background .3s, color .3s;
+      line-height: 1.6;
     }
-    /* Sidebar */
-    .sidebar {
-      width: 280px;
-      background: var(--secondary);
-      padding: 30px 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      box-shadow: 2px 0 8px rgba(0,0,0,.05);
-      transition: background .3s;
-    }
-    .sidebar h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 26px;
-      color: var(--primary);
-      margin-bottom: 10px;
-    }
-    .sidebar h2 {
-      font-size: 16px;
-      font-weight: 400;
-      color: var(--muted);
-      margin-bottom: 25px;
-    }
-    .contact a {
-      display: block;
-      color: var(--primary);
-      margin-bottom: 10px;
-      font-size: 14px;
-      text-decoration: none;
-    }
-    .skills span {
-      display: inline-block;
+    header {
       background: var(--primary);
       color: #fff;
-      font-size: 13px;
-      padding: 6px 12px;
-      margin: 5px 5px 0 0;
-      border-radius: 50px;
-      transition: background .3s;
-    }
-    .download-btn {
-      margin-top: 20px;
-      padding: 12px;
+      padding: 40px 20px;
       text-align: center;
-      background: var(--accent);
-      color: #fff;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background .2s;
-      display: block;
+      position: relative;
     }
-    .download-btn:hover { background: #ea580c; }
-    /* Dark mode toggle */
+    header h1 {
+      font-family: 'Merriweather', serif;
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+    header h2 {
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--accent);
+    }
     .toggle {
       position: absolute;
       top: 15px;
       right: 20px;
-      font-size: 20px;
-      cursor: pointer;
+      font-size: 18px;
       background: var(--accent);
       color: #fff;
       border: none;
-      padding: 8px 12px;
+      padding: 8px 14px;
       border-radius: 50px;
+      cursor: pointer;
       transition: background .3s;
     }
-    .toggle:hover { background: #ea580c; }
-    /* Main */
-    .main {
-      flex: 1;
-      padding: 40px 60px;
-      position: relative;
+    .toggle:hover { background: #0d9488; }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
-    .section {
-      margin-bottom: 40px;
-      animation: fadeInUp .8s ease;
+    .card {
+      background: var(--card);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+      transition: background .3s, color .3s;
     }
-    .section h3 {
-      font-family: 'Playfair Display', serif;
+    .card h3 {
+      font-family: 'Merriweather', serif;
       font-size: 22px;
-      color: var(--primary);
       margin-bottom: 15px;
+      color: var(--primary);
       border-bottom: 2px solid var(--accent);
       display: inline-block;
       padding-bottom: 4px;
     }
-    .section p, .section li {
-      font-size: 15px;
-      line-height: 1.6;
-      margin-bottom: 10px;
-      color: var(--text);
+    .contact a {
+      display: inline-block;
+      margin-right: 15px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
     }
-    ul { padding-left: 20px; }
+    .skills span {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: 13px;
+      padding: 6px 12px;
+      border-radius: 50px;
+      margin: 5px 8px 5px 0;
+      transition: transform .2s;
+    }
+    .skills span:hover { transform: scale(1.05); }
     .timeline {
-      border-left: 3px solid var(--secondary);
+      border-left: 3px solid var(--accent);
       padding-left: 20px;
     }
     .timeline .job {
@@ -142,64 +118,72 @@
       background: var(--accent);
       border-radius: 50%;
     }
-    .job-title { font-weight: 600; color: var(--primary); display:block; }
-    .job-meta { font-size: 14px; color: var(--muted); display:block; margin-bottom:8px; }
-    .footer {
+    .job-title { font-weight: 600; font-size: 16px; color: var(--primary); }
+    .job-meta { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
+    ul { padding-left: 20px; }
+    ul li { margin-bottom: 6px; }
+    .download-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 18px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background .2s;
+    }
+    .download-btn:hover { background:#0d9488; }
+    footer {
       text-align: center;
-      font-size: 13px;
+      font-size: 14px;
       color: var(--muted);
-      margin-top: 50px;
-    }
-    /* Animation */
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @media (max-width: 900px) {
-      body { flex-direction: column; }
-      .sidebar { width: 100%; flex-direction: row; align-items: center; }
-      .main { padding: 20px; }
+      margin: 40px 0 20px;
     }
   </style>
 </head>
 <body>
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <div>
-      <h1>Kedhar Vishnu</h1>
-      <h2>Java Developer (4.7 Yrs)</h2>
+  <header>
+    <h1>Kedhar Vishnu</h1>
+    <h2>Java Developer (4.7 Yrs)</h2>
+    <button class="toggle" id="modeToggle">🌙</button>
+  </header>
+
+  <main>
+    <!-- Contact -->
+    <div class="card">
+      <h3>Contact</h3>
       <div class="contact">
         <a href="mailto:kedharvishnu77@gmail.com">📧 kedharvishnu77@gmail.com</a>
         <a href="tel:+919912324400">📞 +91 9912324400</a>
       </div>
+      <a href="KedharVishnu_Resume.pdf" class="download-btn" download>📄 Download Resume</a>
+    </div>
+
+    <!-- Profile -->
+    <div class="card">
+      <h3>Profile Summary</h3>
+      <p>Java Developer with 4.7 years of experience in building enterprise-grade web applications. Skilled in Java/J2EE, Spring Boot, Microservices, AWS Cloud, and React.js. Experienced in Agile methodologies, CI/CD, and developing scalable, secure applications with strong database and API integration expertise.</p>
+    </div>
+
+    <!-- Skills -->
+    <div class="card">
+      <h3>Skills</h3>
       <div class="skills">
-        <h4>Skills</h4>
         <span>Java</span><span>Spring Boot</span><span>Microservices</span>
         <span>AWS</span><span>Azure</span><span>React.js</span>
         <span>Hibernate</span><span>SQL</span><span>Docker</span>
         <span>Git</span><span>Maven</span><span>JUnit</span>
       </div>
-      <a href="KedharVishnu_Resume.pdf" class="download-btn" download>📄 Download Resume</a>
     </div>
-  </aside>
 
-  <!-- Main -->
-  <main class="main">
-    <button class="toggle" id="modeToggle">🌙</button>
-    
-    <section class="section">
-      <h3>Profile Summary</h3>
-      <p>Java Developer with 4.7 years of experience in building enterprise-grade web applications. 
-      Skilled in Java/J2EE, Spring Boot, Microservices, AWS Cloud, and React.js. Experienced in Agile methodologies, 
-      CI/CD, and developing scalable, secure applications with strong database and API integration expertise.</p>
-    </section>
-
-    <section class="section">
+    <!-- Experience -->
+    <div class="card">
       <h3>Experience</h3>
       <div class="timeline">
         <div class="job">
-          <span class="job-title">System Engineer – Tata Consultancy Services (TCS)</span>
-          <span class="job-meta">Hyderabad | Nov 2020 – Present</span>
+          <div class="job-title">System Engineer – Tata Consultancy Services (TCS)</div>
+          <div class="job-meta">Hyderabad | Nov 2020 – Present</div>
           <ul>
             <li>Developed enterprise apps using Spring Boot, Microservices, and Core Java.</li>
             <li>Migrated monolithic systems to resilient microservices architectures.</li>
@@ -209,35 +193,37 @@
           </ul>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="section">
+    <!-- Projects -->
+    <div class="card">
       <h3>Projects</h3>
       <ul>
         <li><strong>Bank of America</strong> – Migrated applications to microservices, built OAuth2.0 authentication, and developed fault-tolerant integrations.</li>
         <li><strong>ASML</strong> – Upgraded JDK to 17, migrated services to AWS EKS, developed React.js UI components, and automated DB operations with Liquibase.</li>
       </ul>
-    </section>
+    </div>
 
-    <section class="section">
+    <!-- Education -->
+    <div class="card">
       <h3>Education</h3>
       <p>B.Tech in Computer Science & Engineering — Vignan’s Foundation for Science, Technology & Research (2016 – 2020)</p>
-    </section>
+    </div>
 
-    <section class="section">
+    <!-- Certifications -->
+    <div class="card">
       <h3>Certifications</h3>
       <ul>
         <li>Business English Certificate (BEC-Vantage, B2 Level) – Cambridge University</li>
         <li>Preliminary English Test (PET, B1 Level) – Cambridge University</li>
       </ul>
-    </section>
-
-    <div class="footer">© <span id="y"></span> Kedhar Vishnu</div>
+    </div>
   </main>
+
+  <footer>© <span id="y"></span> Kedhar Vishnu</footer>
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
-
     const toggle = document.getElementById("modeToggle");
     toggle.addEventListener("click", () => {
       document.body.classList.toggle("dark");
