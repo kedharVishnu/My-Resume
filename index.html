@@ -1,156 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kedhar Vishnu – Resume</title>
-  <meta name="description" content="Java Developer | 4.7 Years Experience | Spring Boot | Microservices | AWS"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#f9fafb; --ink:#0f172a; --soft:#64748b; --accent:#2563eb; --accent2:#9333ea;
+    :root {
+      --bg: #ffffff;
+      --primary: #0f4c81;
+      --secondary: #f3f6fa;
+      --text: #1e293b;
+      --muted: #64748b;
+      --accent: #f97316;
     }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Poppins,system-ui,sans-serif;background:var(--bg);color:var(--ink);}
-    h1,h2,h3{margin:0}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:1080px;margin:0 auto;padding:20px}
-    /* Hero */
-    .hero{padding:80px 20px;text-align:center;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#fff;border-radius:0 0 30px 30px;box-shadow:0 4px 12px rgba(0,0,0,.15)}
-    .hero h1{font-size:40px;font-weight:700}
-    .hero h2{font-size:20px;font-weight:400;margin-top:8px}
-    .hero .cta{margin-top:22px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
-    .btn{padding:12px 22px;border-radius:10px;font-weight:500;transition:.2s;box-shadow:0 4px 10px rgba(0,0,0,.15)}
-    .btn-dark{background:#0f172a;color:#fff}
-    .btn-light{background:#fff;color:var(--accent)}
-    .btn:hover{transform:translateY(-2px)}
-    /* Highlights */
-    .highlights{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:-40px}
-    .highlight{background:#fff;border-radius:14px;padding:20px;box-shadow:0 4px 10px rgba(0,0,0,.05);text-align:center;font-weight:500}
-    /* Sections */
-    section{margin-top:50px}
-    h2{font-size:24px;margin-bottom:16px;color:var(--accent)}
-    .card{background:#fff;padding:22px;border-radius:16px;box-shadow:0 4px 10px rgba(0,0,0,.05);margin-bottom:20px}
-    /* Skills */
-    .chips{display:flex;flex-wrap:wrap;gap:10px}
-    .chip{padding:8px 14px;border-radius:999px;background:var(--accent);color:#fff;font-size:14px;font-weight:500}
-    /* Timeline */
-    .timeline{position:relative;margin-left:16px}
-    .timeline:before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#dbeafe}
-    .entry{margin:20px 0;padding-left:20px;position:relative}
-    .entry:before{content:'';position:absolute;left:-8px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--accent)}
-    .entry strong{font-weight:600}
-    /* Footer */
-    .footer{text-align:center;color:var(--soft);font-size:14px;margin:50px 0 20px}
-  </style>
-</head>
-<body>
-  <header class="hero">
-    <h1>Kedhar Vishnu Kurivella</h1>
-    <h2>Java Developer | 4.7 Years of Experience</h2>
-    <div class="cta">
-      <a href="mailto:kedharvishnu77@gmail.com" class="btn btn-light">📧 Email</a>
-      <a href="tel:+919912324400" class="btn btn-dark">📞 Call</a>
-      <a href="KedharVishnu_Resume.pdf" class="btn btn-light" download>📄 Download Resume</a>
-    </div>
-  </header>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      min-height: 100vh;
+    }
+    /* Sidebar */
+    .sidebar {
+      width: 280px;
+      background: var(--secondary);
+      padding: 30px
 
-  <div class="container">
-    <!-- Highlights -->
-    <div class="highlights">
-      <div class="highlight">✅ 4.7 Years Experience</div>
-      <div class="highlight">☕ Java / Spring Boot</div>
-      <div class="highlight">☁️ AWS & Azure</div>
-      <div class="highlight">💡 Microservices Expert</div>
-    </div>
-
-    <!-- Profile -->
-    <section>
-      <h2>Profile Summary</h2>
-      <div class="card">
-        <p>Java Developer with 4.7 years of experience in designing, developing, and maintaining enterprise-grade web applications. 
-        Proficient in Java/J2EE, Spring Boot, Microservices, React.js, and AWS Cloud. Skilled in building scalable applications, 
-        integrating APIs, and collaborating with cross-functional teams using Agile methodologies.</p>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section>
-      <h2>Technical Skills</h2>
-      <div class="card chips">
-        <span class="chip">Java</span>
-        <span class="chip">Spring Boot</span>
-        <span class="chip">Microservices</span>
-        <span class="chip">React.js</span>
-        <span class="chip">AWS</span>
-        <span class="chip">Azure</span>
-        <span class="chip">Hibernate</span>
-        <span class="chip">JPA</span>
-        <span class="chip">SQL / PLSQL</span>
-        <span class="chip">Oracle</span>
-        <span class="chip">MySQL</span>
-        <span class="chip">Git</span>
-        <span class="chip">Docker</span>
-        <span class="chip">Maven</span>
-        <span class="chip">JUnit</span>
-        <span class="chip">Mockito</span>
-        <span class="chip">HTML/CSS/JS</span>
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section>
-      <h2>Experience</h2>
-      <div class="card timeline">
-        <div class="entry">
-          <strong>System Engineer – Tata Consultancy Services (TCS)</strong>, Hyderabad<br/>
-          <em>Nov 2020 – Present</em>
-          <ul>
-            <li>Designed and developed enterprise apps using Spring Boot, Microservices, and Core Java.</li>
-            <li>Migrated monolithic applications to microservices architecture with event-driven design.</li>
-            <li>Implemented authentication/authorization with Spring Security, OAuth2.0, and JWT.</li>
-            <li>Integrated Apache Kafka for service communication.</li>
-            <li>Deployed applications on AWS EKS clusters ensuring scalability.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section>
-      <h2>Projects</h2>
-      <div class="card">
-        <ul>
-          <li><strong>Bank of America (Banking Domain)</strong> – Migrated large-scale apps from monolithic to microservices, built secure authentication with OAuth2.0 and JWT, and integrated fault-tolerant services.</li>
-          <li><strong>ASML (Semiconductor Domain)</strong> – Developed data visualization dashboards, upgraded JDK from 1.7 to 17, migrated services to AWS EKS, and created responsive UI with React.js.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section>
-      <h2>Education</h2>
-      <div class="card">
-        <p>B.Tech in Computer Science & Engineering — Vignan’s Foundation for Science, Technology & Research (2016 – 2020)</p>
-      </div>
-    </section>
-
-    <!-- Certifications -->
-    <section>
-      <h2>Certifications</h2>
-      <div class="card">
-        <ul>
-          <li>Business English Certificate (BEC-Vantage, B2 Level) – Cambridge University</li>
-          <li>Preliminary English Test (PET, B1 Level) – Cambridge University</li>
-        </ul>
-      </div>
-    </section>
-
-    <div class="footer">© <span id="y"></span> Kedhar Vishnu Kurivella</div>
-  </div>
-  <script>document.getElementById("y").textContent=new Date().getFullYear();</script>
-</body>
-</html>
